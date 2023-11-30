@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .shape-container {
+        position: relative;
+      }
+
+      .grow-shrink {
+        width: 60px;
+        height: 60px;
+        background-color: #85554f;
+        position: absolute;
+        animation: growShrinkAnimation 2s infinite alternate;
+      }
+
+      .up-down {
+        width: 100px;
+        height: 100px;
+        background-color: #92a6b3;
+        position: absolute;
+        animation: upDownAnimation 2s infinite alternate;
+      }
+      .change-color {
+        width: 80px;
+        height: 80px;
+        background-color: #8ec2a3;
+        position: absolute;
+        animation: changeColorAnimation 2s infinite alternate;
+      }
+
+      .left-right {
+        width: 30px;
+        height: 30px;
+        background-color: rgb(145, 121, 155);
+        position: absolute;
+        animation: leftRightAnimation 2s infinite alternate;
+      }
+      .transparency {
+        width: 70px;
+        height: 70px;
+        background-color: rgb(93, 73, 86);
+        position: absolute;
+        animation: transparencyAnimation 2s infinite alternate;
+      }
+
+      @keyframes growShrinkAnimation {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(1.5);
+        }
+      }
+
+      @keyframes upDownAnimation {
+        0% {
+          top: 0;
+        }
+        100% {
+          top: 100px;
+        }
+      }
+
+      @keyframes changeColorAnimation {
+        0% {
+          background-color: #448f63;
+        }
+        100% {
+          background-color: #e7b13c;
+        }
+      }
+
+      @keyframes leftRightAnimation {
+        0% {
+          left: 0;
+        }
+        100% {
+          left: 70px;
+        }
+      }
+
+      @keyframes transparencyAnimation {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0.2;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shape-container">
+      <div class="grow-shrink"></div>
+    </div>
+
+    <div class="shape-container">
+      <div class="up-down"></div>
+    </div>
+
+    <div class="shape-container">
+      <div class="change-color"></div>
+    </div>
+
+    <div class="shape-container">
+      <div class="left-right"></div>
+    </div>
+
+    <div class="shape-container">
+      <div class="transparency"></div>
+    </div>
+  </body>
+</html>
